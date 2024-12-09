@@ -1,0 +1,42 @@
+@HostAddressRoot = https://localhost:7293
+
+GET {{HostAddressRoot}}/api/destinations?searchFor=San
+Accept: application/json
+
+###
+GET {{HostAddressRoot}}/api/destinations
+Accept: application/json
+
+###
+PUT {{HostAddressRoot}}/api/destinations/1/images
+Accept: application/json
+Content-Type: application/json
+
+ { 
+   "ImagesToUpdate": [ 
+    {
+      "Name": "antwerp.jpg",
+      "ImageBytes": "base64string"
+    }, 
+    {
+      "Name": "antwerp2.jpg",
+      "ImageBytes": "base64string"
+    }, 
+    {
+      "Name": "sanfrancisco.jpg",
+      "ImageBytes": "base64string"
+    }]
+ }
+
+###
+GET {{HostAddressRoot}}/api/processdestinationimagechanges
+Accept: application/json 
+
+###
+GET {{HostAddressRoot}}/api/itineraries?searchFor=Paris
+Accept: application/json
+
+###
+GET {{HostAddressRoot}}/api/itineraries/1/stops
+Accept: application/json 
+ 
